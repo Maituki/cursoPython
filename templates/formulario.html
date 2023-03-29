@@ -1,0 +1,39 @@
+|   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/formulario" method="POST", id="formulario">
+    <h2> CONTACT </h2>
+    <table>
+    <tr>
+        <td>
+        <label for="txtNombre">Name</label>  
+        <input type="text" name="txtNombre" id="txtNombre">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <label for="txtEmail">email</label>  
+        <input type="email" name="txtEmail" id="txtEmail">
+        </td>
+    </tr>
+    <tr>
+        <td>
+    <!--Dato tipo textarea-->
+        <label for="txtMessage">Message</label>  
+        <textarea name="txtMessage" id="txtMessage" cols="30" rows="10"></textarea>
+        </td>
+    </tr>
+        <td>
+            <input type="submit" value="Send your Message">
+        </td>
+    <tr>
+    </table>
+    </form>
+</body>
+</html>

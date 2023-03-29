@@ -1,0 +1,50 @@
+|   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir nuevo plato al Menú</title>
+</head>
+<body>
+    <form action="/insertar_comida" method="POST" id="insertar_comida">
+    <h2> Añadir nuevo plato al Menú </h2>
+   
+<table>
+<tr>
+    <td>
+     <label for="txtNombre">Nombre</label>  
+    <input type="text" name="txtNombre" id="txtNombre">
+    </td>
+</tr>
+<tr>
+    <td>
+    <label for="txtDescripcion">Descripción</label>  
+    <input type="text" name="txtDescripcion" id="txtDescripcion">
+    </td>
+</tr>
+<tr>
+    <td>
+        <label for="txtPrecio"> Precio </label>  
+        <input type="number" name="txtPrecio" id="txtPrecio">
+        </td>
+<tr>
+        <td>
+        <label for="txtCategoria"> Categoria </label>     
+        <select name="txtCategoria" id="txtCategoria">
+            <option value="Carnes">Carnes</option>
+            <option value="Pescados">Pescados</option>
+            <option value="Guarniciones">Guarniciones</option>
+          </select>
+       
+        </td>
+</tr>
+</tr>
+    <td>
+        <input type="submit" value="Enviando">
+    </td>
+<tr>
+</table>
+</form>
+</body>
+</html>

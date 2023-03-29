@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>mi primera pagina web</h1>
+    <p>mi primer parrafo de HTML</p>
+    <p>HOLA {{empleado.nombre}} {{empleado.apellido}} .Tu edad es: {{empleado.edad}} años</p>
+{#otra forma si pasamos los atributos#}
+    <p>Identificación {{nombre}} {{apellido}} . Edad: {{edad}} años</p>
+    
+<!--- esto es un comentario htnml. no se ve---->
+{# esto es un comentario Jinja2 es la forma de programar
+podemos programar y hacer la pagina dinamica #}
+
+{% if name == "Jon" %}
+<p>Hola Jon</p>
+{% else %}
+<p>Hola Maria</p>
+{%endif %}
+</body>
+</html>

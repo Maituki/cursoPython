@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .myDiv {
+
+
+          font-family: 'Avenir Next LT Pro';
+
+
+          font-weight: bold;
+
+
+          border: 5px outset #00A4BD;   
+
+
+          color: #2D3E50;
+
+
+          background-color: #EAF0F6;
+
+
+          text-align: center;
+
+
+        }
+        h1 {
+            color: #4f81bd;
+            text-align: center;
+        }
+        table
+        {
+            width: 100%;
+        }
+        table.t1 {
+          margin: 1em auto;
+          border-collapse: collapse;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .t1 th, .t1 td {
+          padding: 4px 8px;
+        }
+        .t1 thead th {
+          background: #4f81bd;
+          text-transform: lowercase;
+          text-align: left;
+          font-size: 15px;
+          color: #fff;
+        }
+        .t1 tr {
+          border-right: 1px solid #95b3d7;
+        }
+        .t1 tbody tr {
+          border-bottom: 1px solid #95b3d7;
+        }
+        .t1 tbody tr:nth-child(odd) {
+          background: #dbe5f0;
+        }
+       
+        .t1 tfoot th {
+          background: #4f81bd;
+          text-align: left;
+          font-weight: normal;
+          font-size: 10px;
+          color: #fff;
+        }
+        .t1 tr *:nth-child(3), .t1 tr *:nth-child(4) {
+          text-align: right;
+        }
+      
+      </style>
+</head>
+<body>
+    
+    <!--
+    {% for persona in personas %}
+        <h2>{{persona.nombre}}</h2>
+    {% endfor %}
+    -->
+    <div style="overflow-x:auto;">
+    <h1>ILARRA</h1>
+    <table class="t1" >
+         <!--cabecera de la tabla estilo diferente   -->
+        <thead>
+            <tr>
+                <th>nombre</th>
+                <th>descripcion</th>
+                <th>precio</th>
+                <th>categoria</th>
+            </tr>
+        </thead>
+        <!--otro estilo diferente al finald de la pagina -->
+        <tfoot>
+            <tr>
+              <th colspan="4"></th>
+            </tr>
+        </tfoot>
+        <tbody>
+        {% for m in menu %}
+            <tr> 
+               <td><a href="/actualizar_comida"> Actualizar </a></td> 
+               <td>{{m.nombre}}</td>
+                <td>{{m.descripcion}}</td>
+                <td>{{m.precio}}</td>
+                <td>{{m.categoria}}</td>
+                <td><a href="/borrar_comida"> Borrar </a></td> 
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+  
+    <!--insertar un boton requiere java script asi q lo hacemos con href -->
+    <!-- utilizamos el href para q vaya al formulario a añadir los datos nuevo plato del menú-->
+    <a href="/insertar_comida">
+      <div class="myDiv">
+
+        <h3>Añade otro plato al menu</h3>
+               
+      </div>
+   
+    </a>
+   
+    </div>  
+</body>
+</html>

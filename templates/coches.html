@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    for c in coches
+#para ordenar la información en la pantalla
+<table>
+    {% for c in coches %}
+    #tr fila
+    <tr>
+        #columna
+        <td>{{c.modelo}}</td>
+        <td> <img src="/static/images/{{c.imagen}}"></td>
+        <td>{{c.precio_contado}}</td>
+        <td>{{c.descripcion}}</td>
+    
+        precio_contado
+        <td>{{persona.apellido}}</td>
+        <td>{{persona.edad}}</td>
+
+        self.id=id
+        self.modelo=modelo
+        self.año=año
+        self.imagen=imagen
+        self.descripcion=descripcion
+        self.precio_contado=precio_contado
+        self.precio_financiado=precio_financiado
+        
+    </tr>
+   {% endfor %}
+</table>
+</body>
+</html>
