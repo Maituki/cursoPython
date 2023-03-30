@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+# radint 2 paramentros , 1 entre 0 y 100 y el size cuantos sacamos
+#datos = np.random.randint(100, size=100_000)
+datos = np.random.randint(100, size=5)
+#series = pd.Series(datos)
+#para q el indice sera a, b no 0 1
+series = pd.Series(datos, index = ["a", "b", "c", "d", "e"])
+#miramos los primeros 5 por defecto
+print(series.head())
+#describe da mucha información
+series.describe()
+# da el valor q esta posicion 500
+#series.iloc[500]
+
+# da el valor q esta posicion 501 y 504
+#series.iloc[501:504]
+#series.iloc[[501,504,509]]
+series.loc["b"]
