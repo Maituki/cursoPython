@@ -1,0 +1,17 @@
+import requests
+url= "https://www.donostia.eus/datosabiertos/recursos/camaras-trafico/camarastraficocas.json"
+resultado = requests.get(url)
+print(resultado)
+print(type(resultado))
+cameras = resultado.text
+print(type(cameras))
+lista_de_camaras= resultado.json()
+print(type(lista_de_camaras))
+for i in lista_de_camaras:
+    print(type(i))
+    if i["Nombre"] == "Loiola":
+      print("Yo vivo en " + i["Nombre"])
+    else:
+      print(i["Nombre"])
+    print("La longitud es" + i["Longitud"])
+    print("La latitud es" + i["Latitud"])
