@@ -1,0 +1,20 @@
+import pandas as pd
+df= pd.read_csv("https://raw.githubusercontent.com/sivabalanb/Data-Analysis-with-Pandas-and-Python/master/fortune1000.csv")
+
+df.head()
+df.loc[df["Company"] == "Apple"]
+df.tail()
+df.loc[501:504,["Rank", "Company", "Sector"]]
+df.loc[501:504,["Company", "Sector", "Profits"]]
+#operacion en un solo comando
+#df.loc[(df["Revenue"] >=14_000) & (df["Revenue"] <=20_000),["Company", "Location", "Revenue"]].sort_values("Revenue", ascending=False)
+#desglobamos la operacion en varias partes
+#df1= df.loc [(df["Revenue"] >=14_000)] 
+#df2= df.loc [(df["Revenue"] <=20_000)] 
+#df3 = df2.sort_values("Revenue", ascending=False)
+#df3.head()
+#df_final = df3[["Company", "Revenue"]]
+#df_final.head()
+df1= df.loc[(df["Sector"] == "Technology") & (df["Employees"] >100_000)]
+# plot.bar es un gráfico en barras donde la y tiene q ser un número
+df1.plot.bar(x="Company", y="Employees")
