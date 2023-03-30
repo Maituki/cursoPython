@@ -1,0 +1,19 @@
+#lista, clave santander, valor lista de 4 precios, simula una tabla así q han de tener todos 4 valores
+import pandas as pd
+acciones = {"SAN":[3,4,6,7], "REP": [14,16,18,20], "IBM": [140,150,160,170]}
+#data frame objeto tipo data frame
+df= pd.DataFrame(acciones)
+print(type(df))
+df.head()
+df.describe()
+#
+df.tail()
+#que filas 1 y 3. solo muestra la ultima instruccion
+df.loc[[1,3]]
+df.loc[20:30]
+#haciendo consultas por filas
+df.loc[df["REP"] > 10]
+#enseñar solo columna IBM: FILAS Y COLUMNAS
+df.loc[df["REP"] ==16, "IBM"]
+#repsol e ibm - simula consulta where
+df.loc[df["REP"] ==16, ["IBM", "REP"]]
